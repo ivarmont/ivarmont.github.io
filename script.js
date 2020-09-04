@@ -8,7 +8,7 @@ const loading = document.getElementById("loading");
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`November 08 ${currentYear} 00:00:00`);
+const birthday = new Date(`November 08 ${currentYear} 00:00:00`);
 
 //Set background year
 year.innerHTML = currentYear;
@@ -17,11 +17,11 @@ year.innerHTML = currentYear;
 function updateCountDown() {
     const currentTime = new Date();
 
-    const diff = newYearTime - currentTime;
+    const diff = birthday - currentTime;
     
     if (diff < 0){
-        newYearTime = new Date(`November 08 ${currentYear+1} 00:00:00`);
-        const diff = newYearTime - currentTime;
+        birthday = new Date(`November 08 ${currentYear+1} 00:00:00`);
+        const diff = birthday - currentTime;
         year.innerHTML = currentYear + 1;
     }
 
